@@ -1,12 +1,46 @@
 # React Calendar Heatmap Chart
 
-A simple and customizable **calendar heatmap chart** for React applications.
+An effective and customizable **calendar heatmap chart** for React applications.This library helps you create a **calendar heatmap**, similar to the **Kite(Zerodha),Angle One,Trading View**, but with additional powerful features:
 
-## 🚀 Installation
+- 🔀 **Customizable date option**
+- 🗓️ **Full control over layout and UI**
+- 🖥️ **Plugin system for extended functionality**
+- ⚡ **Lightweight with high speed**
+- ✅ **Supports dynamic data updates**
+- ♾️ **And many more...**
 
-```sh
+## 🎮 Try it Out
+
+Check out the live demo on **CodeSandbox**:  
+🔗 [Live Demo](https://codesandbox.io/p/devbox/6w2j62)
+
+## 📦 Installation
+
+Install via **npm** or **yarn**:
+
+````sh
 npm install react-calendar-heatmap-chart
-```
+# or
+yarn add react-calendar-heatmap-chart
+
+## 📸 Outputs
+
+### Light Mode:
+
+![Alt Lightmode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261945/light_okam2w.png)
+
+### Dark Mode:
+
+![Alt Darkmode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261940/dark_urzqoi.png)
+
+## Props
+
+| Prop          | Type    | Description                                                                   |
+| ------------- | ------- | ----------------------------------------------------------------------------- |
+| `data`        | Array   | Array of objects containing `date` (YYYY-MM-DD) and `net_profit_loss` values. |
+| `displayDate` | Boolean | If `true`, the date will be displayed on hover.                               |
+| `mode`        | String  | Theme mode, can be `"light"` or `"dark"`. Defaults to `"light"`.              |
+| `bgColor`     | String  | Background color of the heatmap. Accepts any valid CSS color value.           |
 
 ## Usage
 
@@ -27,26 +61,16 @@ export default function Heatmap() {
     { date: "2025-02-17", net_profit_loss: 15 },
   ];
 
-  return <HeatmapCalendarChart data={data} displayDate={true} />;
+  return (
+    <HeatmapCalendarChart
+      mode="dark"
+      data={data}
+      displayDate={true}
+      bgColor={"#28243D"}
+    />
+  );
 }
-```
-
-## Props
-
-| Prop          | Type    | Description                                                                   |
-| ------------- | ------- | ----------------------------------------------------------------------------- |
-| `data`        | Array   | Array of objects containing `date` (YYYY-MM-DD) and `net_profit_loss` values. |
-| `displayDate` | Boolean | If `true`, the date will be displayed on hover.                               |
-
-## 📸 Outputs
-
-### Light Mode:
-
-![Alt Lightmode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261945/light_okam2w.png)
-
-### Dark Mode:
-
-![Alt Darkmode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261940/dark_urzqoi.png)
+````
 
 ## 📜 License
 

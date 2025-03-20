@@ -6,4 +6,6 @@ interface TradeData {
 export interface HeatmapCalendarChartProps {
   data: TradeData[];
   displayDate?: boolean;
+  mode?: "light" | "dark";
+  bgColor?: string;
 }

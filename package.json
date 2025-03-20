@@ -1,6 +1,6 @@
 {
   "name": "react-calendar-heatmap-chart",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "main": "dist/index.js",
   "type": "module",
   "types": "dist/index.d.ts",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.4.7"
+    "@mui/material": "^6.4.8"
   },
   "repository": {
     "type": "git",

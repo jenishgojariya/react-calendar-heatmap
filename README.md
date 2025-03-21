@@ -1,6 +1,6 @@
 # React Calendar Heatmap Chart
 
-An effective and customizable **calendar heatmap chart** for React applications.This library helps you create a **calendar heatmap**, similar to the **Kite(Zerodha),Angle One,Trading View**, but with additional powerful features:
+An effective and customizable **calendar heatmap chart** for React applications. This library helps you create a **calendar heatmap**, similar to **Kite (Zerodha), Angel One, TradingView**, but with additional powerful features:
 
 - 🔀 **Customizable date option**
 - 🗓️ **Full control over layout and UI**
@@ -9,29 +9,38 @@ An effective and customizable **calendar heatmap chart** for React applications.
 - ✅ **Supports dynamic data updates**
 - ♾️ **And many more...**
 
+---
+
 ## 🎮 Try it Out
 
 Check out the live demo on **CodeSandbox**:  
 🔗 [Live Demo](https://codesandbox.io/p/devbox/6w2j62)
 
+---
+
 ## 📦 Installation
 
 Install via **npm** or **yarn**:
 
-````sh
+```sh
 npm install react-calendar-heatmap-chart
 # or
 yarn add react-calendar-heatmap-chart
+```
+
+---
 
 ## 📸 Outputs
 
 ### Light Mode:
 
-![Alt Lightmode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261945/light_okam2w.png)
+![Light Mode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261945/light_okam2w.png)
 
 ### Dark Mode:
 
-![Alt Darkmode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261940/dark_urzqoi.png)
+![Dark Mode](https://res.cloudinary.com/du6xxru25/image/upload/v1741261940/dark_urzqoi.png)
+
+---
 
 ## Props
 
@@ -42,7 +51,9 @@ yarn add react-calendar-heatmap-chart
 | `mode`        | String  | Theme mode, can be `"light"` or `"dark"`. Defaults to `"light"`.              |
 | `bgColor`     | String  | Background color of the heatmap. Accepts any valid CSS color value.           |
 
-## Usage
+---
+
+## 🚀 Usage
 
 ```jsx
 import { HeatmapCalendarChart } from "react-calendar-heatmap-chart";
@@ -70,16 +81,32 @@ export default function Heatmap() {
     />
   );
 }
-````
+```
+
+---
 
 ## 📜 License
 
 This project is licensed under the **MIT License**.
 
-## Repository
+---
 
-[GitHub Repository](https://github.com/jenishgojariya/react-calendar-heatmap.git)
+## 🏗️ Repository
+
+🔗 [GitHub Repository](https://github.com/jenishgojariya/react-calendar-heatmap.git)
+
+---
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check issues and make pull requests.
+
+---
+
+## 📬 Reach Out to Me
+
+If you have any questions, need clarification, or want to discuss something related to the project, feel free to reach out:
+
+- **Email:** jenish.gojariya@gmail.com
+- **LinkedIn:** [Jenish Gojariya](https://www.linkedin.com/in/jenish-gojariya)
+- **GitHub:** [jenishgojariya](https://github.com/jenishgojariya)

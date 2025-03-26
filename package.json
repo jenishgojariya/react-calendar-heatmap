@@ -21,7 +21,7 @@
   ],
   "author": "Jenish Gojariya",
   "license": "MIT",
-  "description": "A customizable React calendar heatmap chart component built with MUI.",
+  "description": "An effective and customizable calendar heatmap chart for React applications. This library helps you create a calendar heatmap, similar to Kite (Zerodha), Angel One, TradingView, but with additional powerful features.",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-typescript": "^12.1.2",

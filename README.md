@@ -107,6 +107,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check issu
 
 If you have any questions, need clarification, or want to discuss something related to the project, feel free to reach out:
 
-- **Email:** jenish.gojariya@gmail.com
+- **Email:** jenishgojariya@gmail.com
 - **LinkedIn:** [Jenish Gojariya](https://www.linkedin.com/in/jenish-gojariya)
 - **GitHub:** [jenishgojariya](https://github.com/jenishgojariya)

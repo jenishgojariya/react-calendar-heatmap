@@ -71,7 +71,11 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
   };
 
   return (
-    <Box sx={{ backgroundColor: bgColor }}>
+    <Box
+      sx={{ backgroundColor: bgColor }}
+      role="region"
+      aria-label="Monthly trading summary"
+    >
       <HorizontalScrollbar>
         {Object.entries(groupedData).map(
           ([month, { label, days, firstDay, totalDays }]) => {
@@ -99,19 +103,25 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
                   bgcolor: mode === "light" ? "#FFF" : "#312D4B",
                   mb: 4,
                 }}
+                role="group"
+                aria-labelledby={`month-label-${month}`}
               >
                 <Typography
+                  id={`month-label-${month}`}
                   variant="h6"
                   fontWeight="bold"
                   sx={{ mb: 2, color: mode === "dark" ? "#D5D5D5" : "inherit" }}
                 >
                   {label}
                 </Typography>
+
+                {/* Weekday Labels */}
                 <Grid
                   container
                   spacing={1}
                   justifyContent="center"
                   sx={{ mb: 1 }}
+                  role="row"
                 >
                   {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
                     (day) => (
@@ -120,13 +130,23 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
                         key={day}
                         xs={1.7}
                         sx={{ fontSize: 12, fontWeight: 500, color: "gray" }}
+                        role="columnheader"
+                        aria-label={day}
                       >
                         {day}
                       </Grid>
                     )
                   )}
                 </Grid>
-                <Grid container spacing={0.5} justifyContent="center">
+
+                {/* Calendar Grid */}
+                <Grid
+                  container
+                  spacing={0.5}
+                  justifyContent="center"
+                  role="grid"
+                >
+                  {/* Empty Start Slots */}
                   {Array(emptyStartSlots)
                     .fill(null)
                     .map((_, index) => (
@@ -135,8 +155,11 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
                         key={`empty-start-${index}`}
                         xs={1.7}
                         sx={{ height: 32 }}
+                        aria-hidden="true"
                       />
                     ))}
+
+                  {/* Calendar Days */}
                   {monthDays.map(({ day, data }) => (
                     <Grid item key={day} xs={1.7}>
                       <Tooltip
@@ -146,8 +169,16 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
                             : "No trade"
                         }
                         arrow
+                        enterDelay={200}
                       >
                         <Box
+                          role="button"
+                          aria-label={
+                            data
+                              ? `Day ${day}, Profit/Loss: ${data.net_profit_loss}`
+                              : `Day ${day}, No trade`
+                          }
+                          tabIndex={0}
                           sx={{
                             width: 28,
                             height: 28,
@@ -173,6 +204,8 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
                       </Tooltip>
                     </Grid>
                   ))}
+
+                  {/* Empty End Slots */}
                   {Array(emptyEndSlots)
                     .fill(null)
                     .map((_, index) => (
@@ -181,6 +214,7 @@ const HeatmapCalendarChart: FC<HeatmapCalendarChartProps> = ({
                         key={`empty-end-${index}`}
                         xs={1.7}
                         sx={{ height: 32 }}
+                        aria-hidden="true"
                       />
                     ))}
                 </Grid>
